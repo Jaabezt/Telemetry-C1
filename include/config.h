@@ -1,0 +1,42 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+// GPS (UART)
+#define GPS_RX_PIN 16
+#define GPS_TX_PIN 17
+#define GPS_BAUD 9600
+
+// LCD (I2C)
+#define LCD_SDA_PIN 21
+#define LCD_SCL_PIN 22
+#define LCD_ADDR 0x27
+#define LCD_COLS 16
+#define LCD_ROWS 2
+
+// SD CARD (SPI)
+#define SD_CS_PIN 5
+#define SD_MOSI_PIN 23
+#define SD_MISO_PIN 19
+#define SD_SCK_PIN 18
+
+// START/STOP BUTTON
+#define LOG_BUTTON_PIN 4
+#define DEBOUNCE_MS 50UL
+
+// LOGGING
+#define LOG_INTERVAL_MS 1000UL   // one row per second
+
+// GPS FIX / TRUST THRESHOLDS
+#define GPS_TIMEOUT_MS 5000UL
+#define MAX_TRUSTED_HDOP 5.0
+#define MIN_MOVEMENT_METERS 1.0
+
+// SPEED SMOOTHING
+#define SPEED_SAMPLE_COUNT 5
+#define MIN_TRUSTED_SPEED_KMH 2.5
+
+// DISPLAY
+#define DISPLAY_INTERVAL_MS 500UL
+#define STATUS_MESSAGE_DURATION_MS 1500UL
+
+#endif
